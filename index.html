@@ -224,7 +224,7 @@
     var crD = new Date();
     var lft = trg - crD;
     var di = Math.floor(lft / (1000 * 60 * 60 * 24));
-    var h = Math.floor((lft / (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var h = Math.floor((lft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var m = Math.floor((lft % (1000 * 60 * 60)) / (1000 * 60));
     var s = Math.floor((lft % (1000 * 60)) / 1000);
     var tt = (document.getElementById("tt").innerHTML =
